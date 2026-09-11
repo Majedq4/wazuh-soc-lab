@@ -1,0 +1,6 @@
+<rule id="100003" level="3">
+  <if_group>windows</if_group>
+  <field name="win.system.eventID">^4688$</field>
+  <description>Windows process creation event (Event ID 4688)</description>
+  <group>process_creation,</group>
+</rule>
