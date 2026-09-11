@@ -33,17 +33,13 @@ step instead of guessing:
    precedence. Needed `SCENoApplyLegacyAuditPolicy` set to `1` in the
    registry, plus a full reboot — a policy refresh alone doesn't apply it.
 
-3. **A duplicate `<localfile>` block in ossec.conf.** I'd added a Security
-   channel entry manually without realizing one already existed further
-   down the file with a query filter on it. Two blocks reading the same
-   channel caused a silent conflict. Removed the duplicate.
 
-4. **No default Wazuh rule matches plain 4688.** This was the actual
+3. **No default Wazuh rule matches plain 4688.** This was the actual
    blocker, even after Windows was logging correctly. The event reached
    Wazuh and got decoded, but with nothing to match it against, it never
    became an alert. Wrote a custom rule for it (see `detection-rules/`).
 
-5. **Command line was still empty** once alerts started firing. Turns out
+4. **Command line was still empty** once alerts started firing. Turns out
    "Audit Process Creation" only logs that a process ran, not what
    arguments it was launched with — that's a separate policy
    (`ProcessCreationIncludeCmdLine_Enabled`). Set that too.
