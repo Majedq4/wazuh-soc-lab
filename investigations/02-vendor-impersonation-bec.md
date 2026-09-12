@@ -46,7 +46,7 @@ T1566.002 - Phishing: Spearphishing Link
 ## What I took from this
 The checklist gets you through most phishing emails fine. The cases that
 actually matter are the ones where the checklist comes back clean, and
-you have to know that clean auth isn't the same as legitimate — and that
+you have to know that clean auth isn't the same as legitimate, and that
 some cases genuinely need more than headers before you can call it
 either way.
 
