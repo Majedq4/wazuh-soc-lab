@@ -9,16 +9,13 @@ trust the process when nothing looks obviously wrong.
 ## Case 1 - the easy one
 
 Fake "your password expires in 2 hours" email, IT department
-impersonation. Old news at this point, but worth noting since it's what
-the checklist was built around. This one had basically every red flag
-stacked on top of each other: SPF, DKIM, and DMARC all failed outright,
-the Reply-To pointed to a completely different domain than the From
-address (a bigger tell than the From mismatch itself, since no real IT
-desk routes replies through some unrelated domain), and the link text
-didn't match where it actually pointed. Good for learning the checklist,
-not really representative of what a well-run phishing attempt looks
-like today. Didn't need much beyond running down the headers to close
-this one as TP.
+impersonation. Old news at this point but it's what the checklist is
+built around. SPF, DKIM, and DMARC all failed outright, Reply-To pointed
+to a totally different domain than From (bigger tell than the From
+mismatch itself, no real IT desk routes replies through some unrelated
+domain), and the link text didn't match where it pointed. Good for
+learning the checklist, not really what a well-run phishing attempt
+looks like now. Closed as TP without much thought.
 
 ## Case 2 - the one that actually made me think
 
