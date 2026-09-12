@@ -22,30 +22,22 @@ this one as TP.
 
 ## Case 2 - the one that actually made me think
 
-Vendor contract notification, claiming to be from a supply company
-Nortex Energy already works with. This time the checklist came back
-clean across the board — SPF pass, DKIM pass, DMARC pass, From /
-Return-Path / Reply-To all matched each other, link text matched its
-actual destination. Nothing to point at.
+Vendor contract email, claiming to be from a supply company Nortex
+Energy already works with. Checklist came back clean this time, SPF/
+DKIM/DMARC all pass, From/Return-Path/Reply-To match, link text matches
+where it actually goes. Nothing in the headers to flag.
 
-The catch turned out to be the domain itself, not anything in the
-headers. The email came from `meridian-supplyco.com` — close to, but not,
-the vendor's actual domain. All that clean authentication only proves
-the mail came from that domain's own mail servers. It says nothing about
-whether that domain belongs to the vendor it claims to be. A WHOIS check
-is exactly what catches this in a live case — a domain registered days
-or weeks ago is one of the strongest single signals for a freshly
-stood-up lookalike, even with perfectly valid SPF/DKIM sitting on top
-of it.
+Domain was the actual problem: meridian-supplyco.com, IP 45.132.192.18,
+close to but not the vendor's real domain. Clean auth just means the
+mail came from that domain's own servers, not that the domain is
+legit. WHOIS is what catches this normally, a domain registered a few
+days old is a big red flag even with valid SPF/DKIM sitting on top of
+it.
 
-Honestly, headers alone weren't enough to close this one either way, and
-I'd rather say that outright than force a TP/FP call I can't back up.
-The real next step lives outside the inbox — confirm the vendor
-relationship against actual internal records, then verify by phone using
-a number already on file, never one supplied in the email. That's
-specifically what defeats this kind of attack, since any "helpful"
-contact info baked into a fraudulent email just loops back to the
-attacker anyway.
+Couldn't call TP or FP off headers alone here, so I didn't force it.
+Real fix is outside the inbox anyway, confirm the vendor relationship
+internally then call a number already on file, not one from the email.
+(T1566.002 if anyone wants the ATT&CK ID.)
 
 ## IOCs (case 2)
 - Sending domain: meridian-supplyco.com
