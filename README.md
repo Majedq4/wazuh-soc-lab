@@ -23,5 +23,6 @@ following a tutorial.
 - [Windows Process Creation (4688) Visibility Gap](investigations/01-windows-4688-visibility-gap.md) —
   ran a MITRE discovery technique, expected it to show up in Wazuh, it
   didn't. Took some digging to figure out why.
+- [Phishing Triage Practice](investigations/02-phishing-triage-practice.md) — checklist walkthrough on an easy case, then a harder one where every technical check actually passes
 
 More write-ups get added as I keep working through this lab.
