@@ -34,7 +34,6 @@ it.
 Couldn't call TP or FP off headers alone here, so I didn't force it.
 Real fix is outside the inbox anyway, confirm the vendor relationship
 internally then call a number already on file, not one from the email.
-(T1566.002 if anyone wants the ATT&CK ID.)
 
 ## IOCs (case 2)
 - Sending domain: meridian-supplyco.com
