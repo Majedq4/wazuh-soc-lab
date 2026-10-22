@@ -13,6 +13,6 @@ added once I run the scenario in my lab.
 | # | Playbook | Lab status |
 |---|----------|------------|
 | 01 | Impossible Travel Login | Paper only |
-| 02 | PowerShell Download | Not tested yet |
+| 02 | PowerShell Download | Paper only |
 | 03 | Multiple Failed Logins | Not tested yet |
 | 04 | Suspicious Scheduled Task | Not tested yet |
